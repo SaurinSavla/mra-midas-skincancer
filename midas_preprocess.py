@@ -1,0 +1,28 @@
+import numpy as np
+import pandas as pd
+
+df = pd.read_excel('C:/Data/DJ/SkinCancer/release_midas.xlsx')
+print("-----------------------------------------------------------")
+num_rows = df.shape[0]
+print(f"The DataFrame has {num_rows} rows.")
+print("-----------------------------------------------------------")
+num_classes = df['midas_location'].nunique()
+print(f"There are {num_classes} unique classes in the 'midas_location' column.")
+print("-----------------------------------------------------------")
+unique_classes = df['midas_location'].unique()
+print(f"The unique classes in the 'midas_location' column are : {unique_classes}")
+print("-----------------------------------------------------------")
+gender_counts = df['midas_gender'].value_counts()
+print(gender_counts)
+print("-----------------------------------------------------------")
+race_counts = df['midas_race'].value_counts()
+print(race_counts)
+print("-----------------------------------------------------------")
+ethnicity_counts = df['midas_ethnicity'].value_counts()
+print(ethnicity_counts)
+print("-----------------------------------------------------------")
+melanoma_counts = df['midas_melanoma'].value_counts()
+print(melanoma_counts)
+print("-----------------------------------------------------------")
+path_counts = df['midas_path'].value_counts()
+print(path_counts)
